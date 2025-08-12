@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="An Iterative Refinement-based Framework for Training-free Segmentation.">
+  <meta name="keywords" content="Semantic Segmentation, Stable Diffusion, Attention Mechanism, Iterative Refinement">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GeoVLA</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">GeoVLA: Empowering 3D Representations in Vision-Language-Action Models</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://github.com/linsun449">Lin Sun</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://github.com/JialeCao001">Bin Xie</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="">Yingfei Liu</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Hao Shi</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Tiancai Wang</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Jiale Cao</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tianjin University,</span>
+            <span class="author-block"><sup>2</sup>Dexmal,</span>
+            <span class="author-block"><sup>3</sup>Tsinghua University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper(Soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--框图-->
+<section class="hero teaser">
+    <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Framework</h2>
+      <img src="static/images/03framework.png" style="width:70%;">
+    </div>
+  </div>
+</section>
+
+<!--摘要-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Vision-Language-Action (VLA) models have emerged as a promising approach for enabling robots to follow language instructions and predict corresponding actions. However, current VLA models mainly rely on 2D visual inputs, neglecting the rich geometric information in the 3D physical world, which limits their spatial awareness and adaptability.
+          </p>
+          <p>
+            In this paper, we present GeoVLA, a novel VLA framework that effectively integrates 3D information to advance robotic manipulation. It uses a vision-language model (VLM) to process images and language instructions, extracting fused vision-language embeddings. In parallel, it converts depth maps into point clouds and employs a customized point encoder, called Point Embedding Network, to generate 3D geometric embeddings independently. These produced embeddings are then concatenated and processed by our proposed spatial-aware action expert, called 3D-enhanced Action Expert, which combines information from different sensor modalities to produce precise action sequences.
+          </p>
+
+          <p>
+            Through extensive experiments in both simulation and real-world environments, GeoVLA demonstrates superior performance and robustness. It achieves state-of-the-art results in the LIBERO and ManiSkill2 simulation benchmarks and shows remarkable robustness in real-world tasks requiring height, size adaptability and viewpoint invariance.
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">In-domain Task</h2>
+        <p>
+          We present several in-domain tasks, including stacking blocks, inserting a circle, picking up a hairclip,
+          hanging a cup, covering a Matryoshka doll, picking up a carrot, placing a basketball, and stacking cups.
+        </p>
+        <div class="publication-video" style="padding-bottom: 30%">
+          <video poster=""  autoplay controls muted loop playsinline width="100%">
+            <source src="static/videos/p_base.mp4"  type="video/mp4">
+          </video>
+        </div>
+
+<!--        高度变化-->
+        <h2 class="title is-3">Height Change</h2>
+        <p>
+          We train the put basketball task in the fifth layer, and evaluate the models from the third to the sixth layers
+        </p>
+        <p>
+          We observe that the position of the circular ball is difficult to accurately perceive, often leading to empty grasps.
+          When encountering out-of-distribution cases, 2D-based methods fail to localize the basket in 3D space,
+          and instead tend to grasp along the projection line from the camera to true position of the basket.
+        </p>
+        <div class="publication-video" style="padding-bottom: 40%">
+          <video poster=""  autoplay controls muted loop playsinline width="100%">
+            <source src="static/videos/p_putball_3.mp4"  type="video/mp4">
+          </video>
+          <p style="text-align: center;">at the third layers</p>
+        </div>
+        <div class="publication-video" style="padding-bottom: 40%">
+          <video poster=""  autoplay controls muted loop playsinline width="100%">
+            <source src="static/videos/p_putball_4.mp4"  type="video/mp4">
+          </video>
+          <p style="text-align: center;">at the forth layers</p>
+        </div>
+        <div class="publication-video" style="padding-bottom: 40%">
+          <video poster=""  autoplay controls muted loop playsinline width="100%">
+            <source src="static/videos/p_putball_5.mp4"  type="video/mp4">
+          </video>
+          <p style="text-align: center;">at the fifth layers (training)</p>
+        </div>
+        <div class="publication-video" style="padding-bottom: 40%">
+          <video poster=""  autoplay controls muted loop playsinline width="100%">
+            <source src="static/videos/p_putball_6.mp4"  type="video/mp4">
+          </video>
+          <p style="text-align: center;">at the sixth layers</p>
+        </div>
+
+
+        <h2 class="title is-3">Size Scale</h2>
+        <p>
+          We train the cover Matryoshka task at the base size, and evaluate the models by scaling the doll size
+        </p>
+        <p>
+          Larger dolls tend to shift the grasping action toward the rear,
+          while smaller dolls increase the difficulty of the task.
+        </p>
+        <div class="publication-video" style="padding-bottom: 40%">
+          <video poster=""  autoplay controls muted loop playsinline width="100%">
+            <source src="static/videos/p_putdoll_2.mp4"  type="video/mp4">
+          </video>
+          <p style="text-align: center;">much larger than training</p>
+        </div>
+        <div class="publication-video" style="padding-bottom: 40%">
+          <video poster=""  autoplay controls muted loop playsinline width="100%">
+            <source src="static/videos/p_putdoll_1.mp4"  type="video/mp4">
+          </video>
+          <p style="text-align: center;">slightly larger than training</p>
+        </div>
+        <div class="publication-video" style="padding-bottom: 40%">
+          <video poster=""  autoplay controls muted loop playsinline width="100%">
+            <source src="static/videos/p_putdoll_0.mp4"  type="video/mp4">
+          </video>
+          <p style="text-align: center;">training</p>
+        </div>
+        <div class="publication-video" style="padding-bottom: 40%">
+          <video poster=""  autoplay controls muted loop playsinline width="100%">
+            <source src="static/videos/p_putdoll_-1.mp4"  type="video/mp4">
+          </video>
+          <p style="text-align: center;">smaller than training</p>
+        </div>
+
+        <h2 class="title is-3">View Shift</h2>
+        <p>
+          We train the stack block task at the base view, and we evaluate the models by shifting the camera view
+        </p>
+        <p>
+          We incorporate a point cloud centered on the end-effector into our model,
+          which remains invariant under changes in viewpoint.
+        </p>
+        <div class="publication-video" style="padding-bottom: 40%">
+          <video poster=""  autoplay controls muted loop playsinline width="100%">
+            <source src="static/videos/p_stack_block0.mp4"  type="video/mp4">
+          </video>
+          <p style="text-align: center;">training view</p>
+        </div>
+        <div class="publication-video" style="padding-bottom: 40%">
+          <video poster=""  autoplay controls muted loop playsinline width="100%">
+            <source src="static/videos/p_stack_block15.mp4"  type="video/mp4">
+          </video>
+          <p style="text-align: center;">shifting 15 degrees</p>
+        </div>
+        <div class="publication-video" style="padding-bottom: 40%">
+          <video poster=""  autoplay controls muted loop playsinline width="100%">
+            <source src="static/videos/p_stack_block30.mp4"  type="video/mp4">
+          </video>
+          <p style="text-align: center;">shifting 30 degrees</p>
+        </div>
+        <div class="publication-video" style="padding-bottom: 40%">
+          <video poster=""  autoplay controls muted loop playsinline width="100%">
+            <source src="static/videos/p_stack_block45.mp4"  type="video/mp4">
+          </video>
+          <p style="text-align: center;">shifting 45 degrees</p>
+        </div>
+
+        <h2 class="title is-3">Background and Lightness Variation</h2>
+        <p>
+          We evaluate the models by changing the background and lightness
+        </p>
+        <div class="publication-video" style="padding-bottom: 40%">
+          <video poster=""  autoplay controls muted loop playsinline width="100%">
+            <source src="static/videos/p_variation_back.mp4"  type="video/mp4">
+          </video>
+          <p style="text-align: center;">varying background</p>
+        </div>
+        <div class="publication-video" style="padding-bottom: 40%">
+          <video poster=""  autoplay controls muted loop playsinline width="100%">
+            <source src="static/videos/p_variation_light.mp4"  type="video/mp4">
+          </video>
+          <p style="text-align: center;">varying lightness</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website refers to <a
+              href="https://github.com/nerfies/nerfies.github.io">nerfies</a>, and
+            is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
